@@ -1,0 +1,75 @@
+@import '../../../styles-variables';
+
+.container {
+  margin-top: 20px;
+}
+
+.main-heading {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+
+mat-card {
+  cursor: pointer;
+  margin: 0 0 20px 0;
+  width: 100%;
+
+  mat-card-title {
+    position: relative;
+
+    code {
+      position: absolute;
+      top: 11px;
+      right: 0;
+      float: right;
+      font-size: 10px;
+    }
+  }
+  mat-card-subtitle {
+    min-height: 20px;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    mat-card-subtitle {
+      min-height: auto;
+    }
+  }
+
+  a {
+    fa-icon {
+      position: relative;
+      bottom: 2px;
+      font-size: 16px;
+      margin: 6px;
+    }
+  }
+
+  a[mat-icon-button] {
+    position: relative;
+    left: 5px;
+  }
+}
+
+
+body {
+  background-color: green;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 4em auto;
+  padding: 4em;
+  background: rgb(163, 50, 50);
+  border-radius: 1em;
+}
+
+.smaller-container {
+    display: flex;  
+    flex-direction: row;
+    align-items: left;
+    padding: 10px;
+  }
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+

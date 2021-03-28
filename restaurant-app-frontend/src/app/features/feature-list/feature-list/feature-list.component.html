@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 rtl class="main-heading">Restauracje</h1>
+    </div>
+    <div class="offset-md-2 col-md-8 entry">
+      <app-big-input class="search-bar" placeholder="Wyszukaj...">
+      </app-big-input>
+    </div>
+
+    <div class="chip-list-container">
+      <mat-chip-list aria-label="Food filter" class="chip-list">
+        <mat-chip>Pizza</mat-chip>
+        <mat-chip>Burger</mat-chip>
+        <mat-chip color="primary" selected>Makaron</mat-chip>
+        <mat-chip color="accent" selected>Chińskie</mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div
+      *ngFor="let feature of features"
+      class="col-md-6 col-lg-4"
+      [ngClass]="routeAnimationsElements"
+    >
+      <mat-card routerLink="/restaurant">
+        <img class="restaurant-image" mat-card-image [src]="feature.image" />
+        <mat-card-title>
+          {{ feature.name }}
+        </mat-card-title>
+        <mat-card-subtitle rtl>
+          {{ feature.description }}
+        </mat-card-subtitle>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 rtl class="main-heading">
+        {{ 'app.examples.theming.parent.title' }}
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6" [ngClass]="routeAnimationsElements">
+      <p rtl>
+        {{ 'app.examples.theming.parent.text1' }} <code>stylesUrls</code>
+        {{ 'app.examples.theming.parent.text2' }} <code>@Component</code>
+        {{ 'app.examples.theming.parent.text3' }} <code>styles.scss</code>
+        {{ 'app.examples.theming.parent.text4' }}
+        <strong>{{ 'app.examples.theming.parent.text5' }}</strong>
+        {{ 'app.examples.theming.parent.text6' }}
+      </p>
+      <p rtl>
+        {{ 'app.examples.theming.parent.text7' }}
+        <strong>{{ 'app.examples.theming.parent.text8' }}</strong>
+        {{ 'app.examples.theming.parent.text9' }}
+        <code>> (child selectors)</code>
+        {{ 'app.examples.theming.parent.text10' }}
+      </p>
+      <pre
+        >{{ themeSrc }}
+      </pre>
+    </div>
+    <div rtl class="col-md-6" [ngClass]="routeAnimationsElements">
+      <div class="example">
+        <h1>{{ 'app.examples.theming.parent.description' }}</h1>
+        <app-child></app-child>
+      </div>
+    </div>
+  </div>
+</div>

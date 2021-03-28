@@ -1,0 +1,137 @@
+@import '../../../styles-variables';
+
+.container {
+  margin-top: 20px;
+}
+
+.main-heading {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+
+mat-card {
+  cursor: pointer;
+  margin: 0 0 20px 0;
+  width: 100%;
+
+  mat-card-title {
+    position: relative;
+
+    code {
+      position: absolute;
+      top: 11px;
+      right: 0;
+      float: right;
+      font-size: 10px;
+    }
+  }
+  mat-card-subtitle {
+    min-height: 20px;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    mat-card-subtitle {
+      min-height: auto;
+    }
+  }
+
+  a {
+    fa-icon {
+      position: relative;
+      bottom: 2px;
+      font-size: 16px;
+      margin: 6px;
+    }
+  }
+
+  a[mat-icon-button] {
+    position: relative;
+    left: 5px;
+  }
+}
+body {
+  background-color: green;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 4em auto;
+  padding: 4em;
+  background: rgb(163, 50, 50);
+  border-radius: 1em;
+}
+
+section.cards {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  gap: 10px;
+}
+
+.vertical {
+  flex-direction: column;
+  grid-row: span 2;
+  grid-column: span 1;
+}
+
+.horizontal {
+  background-color: green;
+  flex-direction: row;
+  display: flex;
+}
+
+.reverse-horizontal {
+  flex-direction: row-reverse;
+  grid-row: span 1;
+  grid-column: span 2;
+}
+
+.card__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__content {
+  width: 100%;
+}
+
+.card__title {
+  font-size: 18px;
+  opacity: 0.8;
+  font-weight: 700;
+  padding-bottom: 0.5em;
+  transition: all 0.25s ease;
+  padding-top: 5px;
+}
+
+.card__price {
+  font-size: 25px;
+  padding-bottom: 0.5em;
+  opacity: 1;
+}
+
+.card__excerpt {
+  font-size: 16px;
+  padding-bottom: 0.5em;
+}
+
+.card__actions {
+  display: flex;  
+  flex-direction: row-reverse;
+  align-items: left;
+  padding: 10px;
+}
+
+.card__image-wrapper {
+  flex-basis: 30%;
+  height: 100%;
+  max-width: 350px;
+  width: 100%;  
+}

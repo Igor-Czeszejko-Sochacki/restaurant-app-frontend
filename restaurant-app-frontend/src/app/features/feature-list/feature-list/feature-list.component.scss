@@ -1,0 +1,72 @@
+@import '../../../../styles-variables';
+
+.container {
+  margin-top: 20px;
+}
+
+.main-heading {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+
+mat-card {
+  cursor: pointer;
+  margin: 0 0 20px 0;
+
+  mat-card-title {
+    position: relative;
+
+    code {
+      position: absolute;
+      top: 11px;
+      right: 0;
+      float: right;
+      font-size: 10px;
+    }
+  }
+  mat-card-subtitle {
+    min-height: 60px;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    mat-card-subtitle {
+      min-height: auto;
+    }
+  }
+
+  a {
+    fa-icon {
+      position: relative;
+      bottom: 2px;
+      font-size: 16px;
+      margin: 6px;
+    }
+  }
+
+  a[mat-icon-button] {
+    position: relative;
+    left: 5px;
+  }
+}
+
+.restaurant-image {
+  height: 150px;
+  object-fit: cover;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.chip-list {
+  width: 400px;
+  text-align: center;
+  margin: 12px 12px 12px 0;
+}
+
+.chip-list-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}

@@ -1,0 +1,28 @@
+@import '../../../styles-variables';
+
+.container {
+  margin-top: 20px;
+}
+
+.main-heading {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 4em auto;
+  padding: 4em;
+  background: rgb(140, 230, 137);
+  border-radius: 1em;
+}
+
+.smaller-container {
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    align-self: flex-end;
+    justify-content: center;
+  }
+

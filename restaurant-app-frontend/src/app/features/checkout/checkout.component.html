@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Koszyk</h1>
+  <section class="cards">
+    <article *ngFor="let restaurant of restaurants" class="horizontal card">
+      <div class="card__image-wrapper">
+        <img class="card__img" [src]="restaurant.image" />
+      </div>
+      <div class="card__content">
+        <div class="card__title">
+          {{ restaurant.name }}
+        </div>
+        <div class="card__excerpt">
+          {{ restaurant.description }}
+        </div>
+        <section class="card__actions">
+          <div class="card__price">15 zł</div>
+        </section>
+      </div>
+    </article>
+  </section>
+  <section class="card__actions">
+    Suma: 3 sasiny
+  </section>
+  <section class="card__actions">
+    <button mat-flat-button routerLink="/payment">Zapłać</button>
+  </section>
+
+</div>

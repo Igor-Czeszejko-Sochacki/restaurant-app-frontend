@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Restauracja</h1>
+  <h1>Makaroniarz Oskarek</h1>
+  <section class="cards">
+    <article *ngFor="let restaurant of restaurants" class="horizontal card">
+      <div class="card__image-wrapper">
+        <img class="card__img" [src]="restaurant.image" />
+      </div>
+      <div class="card__content">
+        <div class="card__title">
+          {{ restaurant.name }}
+        </div>
+        <div class="card__excerpt">
+          {{ restaurant.description }}
+        </div>
+        <section class="card__actions">
+          <div class="card__price">15 zł</div>
+          <button mat-flat-button (click)="openDialog()">Dodaj</button>
+        </section>
+      </div>
+    </article>
+  </section>
+</div>
